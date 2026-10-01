@@ -324,7 +324,7 @@ El gato duerme.
 Simplificando:
 
 $$
-P(El,gato,dorme,.)
+P(El,gato,duerme,.)
 $$
 
 puede escribirse como:
@@ -464,7 +464,7 @@ La probabilidad se interpreta en relación con frecuencias de eventos bajo repet
 
 ### Bayesiana
 
-La probabilidad puede representar un grado de credencia sobre una hipótesis dada la información disponible.
+La probabilidad puede representar un grado de creencia sobre una hipótesis dada la información disponible.
 
 No es necesario resolver aquí el debate filosófico entre ambas.
 
