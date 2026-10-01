@@ -2,7 +2,7 @@
 
 > **Módulo:** Anatomía de un LLM
 > **Nivel:** Desde cero → avanzado → Maestría/PhD
-> **Prerequisitos:** Pretraining, Fine-Tuning, Transformer, inferencia, contexto y next-token prediction
+> **Prerrequisitos:** Pretraining, Fine-Tuning, Transformer, inferencia, contexto y next-token prediction
 > **Conceptos clave:** instruction tuning, instruction following, SFT, supervised fine-tuning, modelo base, modelo instruccional, prompt, respuesta objetivo, dataset de instrucciones, preference optimization, alignment, RLHF, DPO, evaluación y seguridad.
 
 ---
@@ -13,7 +13,7 @@
 
 La idea básica es:
 
-```text id="w2e7o1"
+```text
 MODELO BASE
      ↓
 EJEMPLOS DE INSTRUCCIONES
@@ -25,7 +25,7 @@ MODELO INSTRUCCIONAL
 
 Por ejemplo, queremos que el modelo aprenda patrones como:
 
-```text id="o3ih5j"
+```text
 "Resume este texto."
         ↓
 resumen
@@ -71,13 +71,13 @@ Supongamos que tenemos un modelo base.
 
 Le damos:
 
-```text id="y7d7kf"
+```text
 Explica qué es Python.
 ```
 
 Un modelo base podría continuar:
 
-```text id="v5q1yr"
+```text
 Explica qué es Python. Python es un lenguaje...
 ```
 
@@ -85,7 +85,7 @@ También podría producir una continuación que no tenga la estructura conversac
 
 Después de Instruction Tuning, esperamos algo más parecido a:
 
-```text id="w5l4r8"
+```text
 Python es un lenguaje de programación...
 ```
 
@@ -101,7 +101,7 @@ La diferencia está en que aprendió:
 
 Podemos representarlo:
 
-```text id="kq8k5a"
+```text
                  PRETRAINING
                       ↓
                  MODELO BASE
@@ -134,7 +134,7 @@ Pero ahora queremos que trabaje como asistente.
 
 Le enseñamos ejemplos:
 
-```text id="i0d4vz"
+```text
 JEFE:
 Resume este informe.
 
@@ -144,7 +144,7 @@ ASISTENTE:
 
 Otro:
 
-```text id="7k6j7u"
+```text
 JEFE:
 Extrae las fechas.
 
@@ -154,7 +154,7 @@ ASISTENTE:
 
 Otro:
 
-```text id="7g4x7e"
+```text
 JEFE:
 Clasifica el riesgo.
 
@@ -178,7 +178,7 @@ Instruction Tuning está relacionado directamente con Fine-Tuning.
 
 Una forma útil de verlo es:
 
-```text id="0ex1fm"
+```text
 FINE-TUNING
 │
 └── INSTRUCTION TUNING
@@ -188,7 +188,7 @@ Pero no todo fine-tuning es instruction tuning.
 
 Por ejemplo:
 
-```text id="4u9wqh"
+```text
 Fine-Tuning:
 clasificación especializada
 ```
@@ -197,7 +197,7 @@ puede no ser un sistema general de seguimiento de instrucciones.
 
 En cambio:
 
-```text id="h7o7ph"
+```text
 Instruction Tuning:
 "Clasifica este texto."
 "Resume este texto."
@@ -217,7 +217,7 @@ En muchos pipelines, Instruction Tuning se implementa mediante:
 
 Conceptualmente:
 
-```text id="9j5r6q"
+```text
 INSTRUCCIÓN
      +
 CONTEXTO
@@ -275,7 +275,7 @@ La estructura exacta puede variar.
 
 Lo importante es que el dataset representa:
 
-```text id="z7z4kq"
+```text
 INSTRUCCIÓN
       ↓
 TAREA
@@ -318,7 +318,7 @@ Esto conecta directamente con el pretraining estudiado anteriormente.
 
 En pretraining:
 
-```text id="9f4s4y"
+```text
 texto
  ↓
 predecir siguiente token
@@ -326,7 +326,7 @@ predecir siguiente token
 
 En Instruction Tuning:
 
-```text id="s7d9hj"
+```text
 instrucción + contexto
  ↓
 generar respuesta esperada
@@ -348,7 +348,7 @@ Lo que cambia principalmente es:
 
 Dataset:
 
-```text id="1cy9r3"
+```text
 INSTRUCCIÓN:
 Explica qué es un token.
 
@@ -358,7 +358,7 @@ Un token es una unidad de texto...
 
 El modelo produce:
 
-```text id="p9e0q7"
+```text
 Un token es una palabra completa...
 ```
 
@@ -368,7 +368,7 @@ La función de pérdida mide la diferencia.
 
 Después:
 
-```text id="wh1p8a"
+```text
 LOSS
  ↓
 BACKPROPAGATION
@@ -390,7 +390,7 @@ También importa cómo representamos la interacción.
 
 Podemos tener:
 
-```text id="m7ph6b"
+```text
 ### Instruction:
 Resume el texto.
 
@@ -403,7 +403,7 @@ Resume el texto.
 
 O:
 
-```text id="r6x5p4"
+```text
 <user>
 Resume el texto.
 </user>
@@ -425,7 +425,7 @@ Los modelos conversacionales suelen utilizar estructuras especiales conocidas co
 
 Una conversación aparentemente sencilla:
 
-```text id="f2v7m1"
+```text
 Usuario:
 ¿Qué es un Transformer?
 
@@ -443,7 +443,7 @@ puede convertirse internamente en una secuencia con tokens especiales que delimi
 
 Conceptualmente:
 
-```text id="9o4b2v"
+```text
 SYSTEM
    ↓
 USER
@@ -459,7 +459,7 @@ Esto es muy importante para Ingeniería de Prompt.
 
 Cuando una interfaz muestra:
 
-```text id="8d9x7q"
+```text
 Usuario:
 Explica attention.
 ```
@@ -468,7 +468,7 @@ el modelo puede recibir internamente una representación estructurada.
 
 Por ejemplo, conceptualmente:
 
-```text id="o5v7qy"
+```text
 <system>
 ...
 </system>
@@ -492,7 +492,7 @@ Esto explica por qué:
 
 Los modelos conversacionales suelen trabajar con roles como:
 
-```text id="qj5m8r"
+```text
 SYSTEM
 USER
 ASSISTANT
@@ -504,7 +504,7 @@ Son una convención de representación que el sistema puede convertir en tokens 
 
 Por eso debemos distinguir:
 
-```text id="70s7rq"
+```text
 INTERFAZ
    ↓
 CHAT STRUCTURE
@@ -522,7 +522,7 @@ Porque durante el entrenamiento recibe muchos ejemplos donde determinadas estruc
 
 Por ejemplo:
 
-```text id="8cqv3j"
+```text
 USER:
 Resume.
 
@@ -532,7 +532,7 @@ ASSISTANT:
 
 El modelo aprende correlaciones entre:
 
-```text id="44nvpa"
+```text
 rol USER
 +
 instrucción
@@ -565,7 +565,7 @@ El comportamiento final puede estar condicionado por:
 
 Por eso:
 
-```text id="k6m1do"
+```text
 instruction following
 ≠
 obediencia ciega
@@ -577,7 +577,7 @@ obediencia ciega
 
 En sistemas conversacionales puede existir una jerarquía conceptual:
 
-```text id="c4w4yn"
+```text
 INSTRUCCIONES DEL SISTEMA
           ↓
 INSTRUCCIONES DEL USUARIO
@@ -599,7 +599,7 @@ La idea importante para Ingeniería de Prompt es:
 
 Supongamos:
 
-```text id="k9x2u8"
+```text
 SYSTEM:
 Responde en español.
 
@@ -619,7 +619,7 @@ La jerarquía es parte del diseño del sistema y de cómo el modelo fue entrenad
 
 El modelo puede aprender patrones como:
 
-```text id="nq6b4g"
+```text
 Usuario pregunta
       ↓
 Asistente responde
@@ -675,7 +675,7 @@ Podemos evaluar:
 
 Ejemplo:
 
-```text id="z8d8k7"
+```text
 Hazlo bien.
 ```
 
@@ -687,7 +687,7 @@ La instrucción es ambigua.
 
 # 23. Mejor instrucción
 
-```text id="w7y3f1"
+```text
 Resume el siguiente documento en cinco puntos.
 Cada punto debe tener máximo 20 palabras.
 No agregues información que no aparezca en el documento.
@@ -708,7 +708,7 @@ El dataset puede enseñar al modelo ese comportamiento.
 
 Si todos los ejemplos tienen:
 
-```text id="4o5p6k"
+```text
 Resume este texto.
 ```
 
@@ -716,7 +716,7 @@ el modelo puede aprender patrones muy específicos.
 
 Es útil incluir variaciones:
 
-```text id="j9u4p7"
+```text
 Resume este texto.
 
 Haz un resumen del siguiente documento.
@@ -736,19 +736,19 @@ Esto ayuda a que el comportamiento no dependa exclusivamente de una frase.
 
 El objetivo no debería ser memorizar:
 
-```text id="xq8y6c"
+```text
 "Resume este texto."
 ```
 
 sino aprender el concepto:
 
-```text id="7axw8h"
+```text
 INSTRUCCIÓN DE RESUMEN
 ```
 
 Así puede responder también a:
 
-```text id="5q7z2x"
+```text
 "Resume el siguiente informe."
 ```
 
@@ -760,7 +760,7 @@ Esto es generalización.
 
 Podemos representar:
 
-```text id="d8w5kg"
+```text
                    MISMA TAREA
                        │
         ┌──────────────┼──────────────┐
@@ -780,7 +780,7 @@ La diversidad lingüística puede ayudar a robustecer el comportamiento.
 
 En lugar de entrenar únicamente una tarea, podemos combinar varias:
 
-```text id="m4s8w7"
+```text
 RESUMEN
 TRADUCCIÓN
 CLASIFICACIÓN
@@ -794,7 +794,7 @@ FORMATO
 
 Visualmente:
 
-```text id="9e5v8s"
+```text
               INSTRUCTION DATASET
                      │
        ┌─────────────┼─────────────┐
@@ -816,7 +816,7 @@ Podemos comparar:
 
 ### Single-task fine-tuning
 
-```text id="7c1p4v"
+```text
 Modelo
  ↓
 clasificación
@@ -824,7 +824,7 @@ clasificación
 
 ### Multi-task instruction tuning
 
-```text id="k6x7wb"
+```text
 Modelo
  ↓
 ┌───────────────┐
@@ -849,7 +849,7 @@ Los datasets de instrucciones pueden contener datos creados o ampliados mediante
 
 Por ejemplo:
 
-```text id="c7d5m3"
+```text
 MODELO TEACHER
       ↓
 genera instrucciones
@@ -885,7 +885,7 @@ Un modelo puede generar:
 
 Por ello:
 
-```text id="z5r4hh"
+```text
 datos sintéticos
       ↓
 filtrado
@@ -905,7 +905,7 @@ Un modelo grande puede generar ejemplos para ayudar a entrenar un modelo menor.
 
 Conceptualmente:
 
-```text id="y2y2c1"
+```text
 TEACHER
   ↓
 instrucciones + respuestas
@@ -937,7 +937,7 @@ Pero existe otra pregunta:
 
 Por ejemplo:
 
-```text id="1y8v5v"
+```text
 Respuesta A:
 larga, correcta, pero poco clara
 
@@ -947,7 +947,7 @@ correcta, clara y concisa
 
 Podemos registrar:
 
-```text id="g5x2cz"
+```text
 B > A
 ```
 
@@ -959,7 +959,7 @@ Esto genera **preference data**.
 
 Podemos visualizar una evolución:
 
-```text id="q5z6q4"
+```text
 PRETRAINING
      ↓
 MODELO BASE
@@ -985,7 +985,7 @@ Uno de los enfoques más conocidos para incorporar preferencias humanas es:
 
 Un pipeline simplificado:
 
-```text id="2o6e2z"
+```text
 MODELO
    ↓
 genera respuestas
@@ -1013,7 +1013,7 @@ Otra técnica ampliamente estudiada es:
 
 En términos conceptuales:
 
-```text id="2w6i6d"
+```text
 PROMPT
   │
   ├── respuesta preferida
@@ -1047,7 +1047,7 @@ Pregunta:
 
 Visualmente:
 
-```text id="xqk7d8"
+```text
 INSTRUCTION TUNING
 
 prompt
@@ -1100,7 +1100,7 @@ Por tanto:
 
 Podemos representarla así:
 
-```text id="8s6x7z"
+```text
                  DATOS MASIVOS
                       ↓
                   PRETRAINING
@@ -1128,13 +1128,13 @@ Es un modelo mental.
 
 No aprende simplemente:
 
-```text id="7s8m5p"
+```text
 "Si veo esta frase, responde exactamente esto."
 ```
 
 Idealmente aprende patrones más generales:
 
-```text id="r7n4wq"
+```text
 INSTRUCCIÓN
       ↓
 IDENTIFICAR TAREA
@@ -1154,7 +1154,7 @@ Podemos definir **instruction following** como la capacidad del modelo de interp
 
 Por ejemplo:
 
-```text id="8e8p4f"
+```text
 "Extrae todas las fechas."
 
 → detectar fechas
@@ -1182,7 +1182,7 @@ Aquí aparece una conexión fundamental para este repositorio.
 
 Un modelo instruccional cambia la relación:
 
-```text id="g5h1pw"
+```text
 ANTES
 
 prompt
@@ -1192,7 +1192,7 @@ continuación de texto
 
 hacia algo más parecido a:
 
-```text id="m6x0re"
+```text
 DESPUÉS
 
 instrucción
@@ -1214,7 +1214,7 @@ Pero:
 
 Supongamos:
 
-```text id="k5h2r3"
+```text
 PROMPT:
 
 Resume este texto en tres puntos.
@@ -1222,13 +1222,13 @@ Resume este texto en tres puntos.
 
 Modelo A:
 
-```text id="9q6xw1"
+```text
 3 puntos
 ```
 
 Modelo B:
 
-```text id="w2j8m7"
+```text
 un párrafo largo
 ```
 
@@ -1236,7 +1236,7 @@ un párrafo largo
 
 Porque:
 
-```text id="p1z4na"
+```text
 Modelo A
 → parámetros + entrenamiento + instruction tuning A
 
@@ -1256,7 +1256,7 @@ Esto es fundamental para comprender por qué **prompt engineering no puede separ
 
 Los datasets pueden reforzar determinados estilos:
 
-```text id="5qk4s1"
+```text
 formal
 técnico
 conciso
@@ -1285,7 +1285,7 @@ Otra distinción importante:
 
 Instrucción proporcionada durante inferencia.
 
-```text id="u9h5w3"
+```text
 "Responde como un tutor de programación."
 ```
 
@@ -1293,14 +1293,14 @@ Instrucción proporcionada durante inferencia.
 
 Entrenamiento realizado antes de la inferencia.
 
-```text id="7h2p4x"
+```text
 muchos ejemplos
 → actualización de parámetros
 ```
 
 Por tanto:
 
-```text id="g8n1cc"
+```text
 SYSTEM PROMPT
 → comportamiento durante esta interacción
 
@@ -1335,7 +1335,7 @@ Una arquitectura profesional debe evaluar ambas estrategias.
 
 Un modelo instruccional puede recibir:
 
-```text id="8g7x2c"
+```text
 INSTRUCCIÓN
 +
 CONTEXTO
@@ -1345,7 +1345,7 @@ EJEMPLOS
 
 y producir:
 
-```text id="d6w3q1"
+```text
 RESPUESTA
 ```
 
@@ -1363,7 +1363,7 @@ Son mecanismos diferentes.
 
 El comportamiento se modifica mediante entrenamiento.
 
-```text id="h7v9z1"
+```text
 datos
  ↓
 loss
@@ -1375,7 +1375,7 @@ parámetros
 
 El modelo recibe ejemplos durante la inferencia.
 
-```text id="n2g8f5"
+```text
 prompt
  ↓
 ejemplos
@@ -1393,7 +1393,7 @@ Los parámetros no necesitan cambiar.
 
 Supongamos:
 
-```text id="8m3q2b"
+```text
 Ejemplo 1:
 Pregunta → respuesta
 
@@ -1408,7 +1408,7 @@ Esto es **few-shot prompting**.
 
 Si esos ejemplos se utilizan para entrenar los parámetros:
 
-```text id="g5v7x9"
+```text
 dataset
  ↓
 training
@@ -1420,7 +1420,7 @@ es fine-tuning.
 
 La diferencia principal es:
 
-```text id="9h6v4j"
+```text
 FEW-SHOT
 → información temporal en el contexto
 
@@ -1454,7 +1454,7 @@ La seguridad de un sistema requiere múltiples capas.
 
 Una arquitectura robusta puede utilizar:
 
-```text id="q2p3n6"
+```text
                SEGURIDAD
                   │
        ┌──────────┼──────────┐
@@ -1481,13 +1481,13 @@ No debemos confiar en una sola capa.
 
 Supongamos que un modelo está entrenado para:
 
-```text id="x8s6xk"
+```text
 seguir instrucciones del sistema
 ```
 
 y recibe un documento:
 
-```text id="t4j5m2"
+```text
 IGNORA TODAS LAS INSTRUCCIONES ANTERIORES...
 ```
 
@@ -1508,7 +1508,7 @@ La seguridad depende también de la arquitectura del sistema.
 
 En sistemas RAG:
 
-```text id="f4y5n8"
+```text
 DOCUMENTO EXTERNO
         ↓
 RAG
@@ -1522,7 +1522,7 @@ El modelo puede recibir instrucciones maliciosas dentro del documento.
 
 Por eso una arquitectura segura debe distinguir:
 
-```text id="1f7j8x"
+```text
 INSTRUCCIÓN
 ≠
 DATOS
@@ -1538,7 +1538,7 @@ Podemos evaluar si el modelo realmente sigue instrucciones.
 
 Ejemplo:
 
-```text id="j9p5h4"
+```text
 Instrucción:
 
 Devuelve exactamente 3 elementos JSON.
@@ -1546,7 +1546,7 @@ Devuelve exactamente 3 elementos JSON.
 
 Evaluamos:
 
-```text id="v8m4x6"
+```text
 ¿devolvió JSON?
 ¿son exactamente 3?
 ¿son válidos?
@@ -1563,7 +1563,7 @@ Esto es más preciso que simplemente preguntar:
 
 Un benchmark puede contener:
 
-```text id="p7f6g2"
+```text
 Tarea A
 Tarea B
 Tarea C
@@ -1573,7 +1573,7 @@ Tarea D
 
 y medir:
 
-```text id="z6s2d4"
+```text
 cumplimiento
 exactitud
 formato
@@ -1589,13 +1589,13 @@ La evaluación debe utilizar ejemplos que no hayan sido utilizados durante entre
 
 Un modelo puede seguir una instrucción:
 
-```text id="k8m5q2"
+```text
 Resume el documento.
 ```
 
 pero fallar ante:
 
-```text id="q3x7n8"
+```text
 Resume el siguiente documento en exactamente tres frases, sin introducir información externa y manteniendo los nombres propios.
 ```
 
@@ -1611,7 +1611,7 @@ Las instrucciones reales suelen combinar tareas.
 
 Por ejemplo:
 
-```text id="x5n4m7"
+```text
 Lee el documento,
 extrae las fechas,
 ordénalas cronológicamente,
@@ -1620,7 +1620,7 @@ y devuelve un JSON.
 
 Aquí tenemos:
 
-```text id="b8w7j4"
+```text
 leer
  +
 extraer
@@ -1638,7 +1638,7 @@ Esto es más complejo que una instrucción aislada.
 
 En sistemas complejos pueden coexistir:
 
-```text id="u7h6k2"
+```text
 POLÍTICA DEL SISTEMA
         ↓
 INSTRUCCIÓN DE LA APLICACIÓN
@@ -1683,7 +1683,7 @@ Los modelos pueden ser entrenados con ejemplos donde una instrucción requiere u
 
 Por ejemplo:
 
-```text id="j3k9m5"
+```text
 USER:
 ¿Cuánto es 125 × 843?
 
@@ -1718,7 +1718,7 @@ Una arquitectura puede entrenar o configurar al modelo para producir estructuras
 
 Después un sistema externo ejecuta:
 
-```text id="e5v3s7"
+```text
 LLM
  ↓
 tool call
@@ -1748,7 +1748,7 @@ Estamos entrenando una red neuronal para aumentar la probabilidad de determinado
 
 No estamos necesariamente agregando:
 
-```text id="t3n8f5"
+```text
 if instruction == "resume":
     ejecutar función RESUMIR()
 ```
@@ -1797,7 +1797,7 @@ Porque no debería memorizar cada instrucción literalmente.
 
 Supongamos entrenamiento:
 
-```text id="m3n7k5"
+```text
 "Resume el texto."
 
 "Sintetiza el documento."
@@ -1807,7 +1807,7 @@ Supongamos entrenamiento:
 
 Después aparece:
 
-```text id="c5v2z8"
+```text
 "Condensa este informe."
 ```
 
@@ -1821,7 +1821,7 @@ Esto es posible gracias a las representaciones aprendidas.
 
 Recordemos:
 
-```text id="d3x7p2"
+```text
 texto
  ↓
 tokens
@@ -1843,7 +1843,7 @@ Esto conecta con los capítulos anteriores.
 
 Podemos conectar todo:
 
-```text id="m4k9q2"
+```text
 INSTRUCCIÓN
     ↓
 TOKENIZACIÓN
@@ -1869,7 +1869,7 @@ Instruction Tuning modifica los parámetros utilizados en esta cadena.
 
 Durante inferencia:
 
-```text id="8p2k5z"
+```text
 PROMPT
  ↓
 modelo instruccional
@@ -1885,37 +1885,37 @@ Podemos pensar en tres niveles:
 
 ### Nivel 1 — Prompt
 
-```text id="7m4n2q"
+```text
 ¿Qué le digo?
 ```
 
 ### Nivel 2 — Modelo
 
-```text id="x5c7b8"
+```text
 ¿Qué aprendió?
 ```
 
 ### Nivel 3 — Sistema
 
-```text id="z3v6k1"
+```text
 ¿Qué herramientas, contexto y restricciones tiene?
 ```
 
 Instruction Tuning pertenece principalmente al:
 
-```text id="4h6q2w"
+```text
 NIVEL DEL MODELO
 ```
 
 Mientras que Prompt Engineering trabaja principalmente con:
 
-```text id="8p3n7k"
+```text
 NIVEL DE ENTRADA / CONTEXTO
 ```
 
 Y la ingeniería de sistemas trabaja con:
 
-```text id="v5m8q2"
+```text
 MODELO + CONTEXTO + TOOLS + DATOS + POLÍTICAS
 ```
 
@@ -1923,7 +1923,7 @@ MODELO + CONTEXTO + TOOLS + DATOS + POLÍTICAS
 
 # 67. Una visión de sistema completo
 
-```text id="e4m8s2"
+```text
                        USUARIO
                           ↓
                         PROMPT
@@ -2021,7 +2021,7 @@ El prompt sigue siendo el mecanismo mediante el cual se especifica la tarea dura
 
 Una forma útil de entender la evolución es:
 
-```text id="n5k7r3"
+```text
 MODELO BASE
      │
      │ "Aprende lenguaje"
@@ -2083,7 +2083,7 @@ El modelo aprende una nueva distribución condicional.
 
 Conceptualmente:
 
-```text id="y8v6r2"
+```text
 ANTES
 
 P_base(y | x)
@@ -2104,7 +2104,7 @@ Estamos modificando los parámetros para alterar la distribución de respuestas.
 
 Desde una perspectiva probabilística:
 
-```text id="v5r8q2"
+```text
 instrucción
     ↓
 representación
@@ -2120,7 +2120,7 @@ Instruction Tuning modifica la distribución para aumentar la probabilidad de re
 
 Esto conecta directamente:
 
-```text id="k2m7x4"
+```text
 PROMPT
 → CONTEXTO
 → REPRESENTACIÓN
@@ -2130,7 +2130,7 @@ PROMPT
 
 con:
 
-```text id="j4q9s6"
+```text
 TRAINING
 → CAMBIO DE PARÁMETROS
 → NUEVA DISTRIBUCIÓN
@@ -2142,7 +2142,7 @@ TRAINING
 
 No existe necesariamente un lugar único:
 
-```text id="r7k3m9"
+```text
 "INSTRUCTION FOLLOWING"
 ```
 
@@ -2178,13 +2178,13 @@ Los investigadores estudian:
 
 El objetivo es pasar de:
 
-```text id="r4n8v1"
+```text
 "El modelo hace X."
 ```
 
 a:
 
-```text id="s7m3q5"
+```text
 "¿Qué mecanismos internos causan X?"
 ```
 
@@ -2200,7 +2200,7 @@ para intentar descomponer representaciones densas en features más interpretable
 
 Conceptualmente:
 
-```text id="w3j8k6"
+```text
 ACTIVACIÓN DEL MODELO
         ↓
 Sparse Autoencoder
@@ -2222,7 +2222,7 @@ Una correlación entre una activación y una conducta no demuestra que esa activ
 
 Por eso la investigación avanzada utiliza intervenciones:
 
-```text id="k8m2r4"
+```text
 observar activación
        ↓
 modificar / intervenir
@@ -2244,14 +2244,14 @@ Ejemplo:
 
 Durante entrenamiento:
 
-```text id="7v3m9x"
+```text
 resumir
 clasificar
 ```
 
 Después:
 
-```text id="q4k7n1"
+```text
 resume y clasifica
 ```
 
@@ -2263,7 +2263,7 @@ La capacidad de combinar habilidades es un aspecto importante de la generalizaci
 
 Un modelo puede producir:
 
-```text id="x8k3m4"
+```text
 "Primero hacemos A.
 Luego B.
 Finalmente C."
@@ -2273,7 +2273,7 @@ sin que eso garantice que el razonamiento interno sea equivalente al proceso des
 
 Por eso debemos distinguir:
 
-```text id="n7v4q6"
+```text
 explicación generada
 ≠
 prueba de proceso interno
@@ -2289,7 +2289,7 @@ Los modelos modernos pueden recibir entrenamiento adicional orientado a tareas d
 
 Conceptualmente:
 
-```text id="f5x8j2"
+```text
 MODELO BASE
      ↓
 INSTRUCTION TUNING
@@ -2332,7 +2332,7 @@ $$
 
 Por tanto:
 
-```text id="f8n3k6"
+```text
 MISMO PROMPT
 +
 MODELO DIFERENTE
@@ -2342,7 +2342,7 @@ POSIBLEMENTE RESPUESTA DIFERENTE
 
 y:
 
-```text id="n7q2x4"
+```text
 MISMO MODELO
 +
 PROMPT DIFERENTE
@@ -2354,7 +2354,7 @@ POSIBLEMENTE RESPUESTA DIFERENTE
 
 # 81. Mapa conceptual final
 
-```text id="u3k8r6"
+```text
                          LLM
                           │
                     PRETRAINING
@@ -2419,7 +2419,7 @@ POSIBLEMENTE RESPUESTA DIFERENTE
 
 Ahora podemos entender mejor una de las ideas centrales de este repositorio:
 
-```text id="e3p6m9"
+```text
 PRETRAINING
     ↓
 ¿Qué capacidades generales aprendió?
