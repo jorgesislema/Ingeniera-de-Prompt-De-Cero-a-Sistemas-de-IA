@@ -2,7 +2,7 @@
 
 > **Nivel:** Fundamentos → Intermedio → Avanzado → Maestría/PhD
 > **Área:** LLM, Post-Training, Seguridad y Sistemas de IA
-> **Prerequisitos:** Pretraining, Fine-Tuning, Instruction Tuning, Probabilidad, Inferencia
+> **Prerrequisitos:** Pretraining, Fine-Tuning, Instruction Tuning, Probabilidad, Inferencia
 > **Objetivo:** Comprender qué significa alinear un modelo de IA con las intenciones humanas, cómo se realiza mediante post-training y preferencias, cuáles son sus limitaciones y qué problemas permanecen abiertos en investigación.
 
 ---
