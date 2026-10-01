@@ -856,7 +856,7 @@ o representaciones diferentes.
 Los tokens se estudiarán detalladamente en:
 
 ```text
-05-Tokens.md
+07-Tokens.md
 ```
 
 ---
@@ -1207,7 +1207,7 @@ En LLM también puede producirse una **alucinación**, término utilizado para d
 Esto será tratado con mayor profundidad en:
 
 ```text
-09-Limitaciones-de-los-LLM.md
+13-Limitaciones-de-la-IA.md
 ```
 
 ---
