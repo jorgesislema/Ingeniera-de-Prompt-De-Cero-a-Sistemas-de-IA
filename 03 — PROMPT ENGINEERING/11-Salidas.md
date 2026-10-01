@@ -1743,7 +1743,7 @@ Una salida estructurada podría ser:
 
 ```json
 {
-  "resumen_financiera": "...",
+  "resumen_financiero": "...",
   "hallazgos": [
     {
       "cuenta": "Inventarios",
