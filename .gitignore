@@ -1,0 +1,17 @@
+# .gitignore docente
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.env.*
+*.ipynb_checkpoints/
+node_modules/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+dist/
+build/
+.coverage
