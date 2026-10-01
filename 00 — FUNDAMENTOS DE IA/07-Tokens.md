@@ -188,7 +188,7 @@ casa
 casas
 casita
 casero
-casero
+casería
 ```
 
 Tendríamos que almacenar muchas variantes.
