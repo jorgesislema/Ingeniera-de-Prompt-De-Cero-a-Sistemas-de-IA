@@ -1252,7 +1252,7 @@ Ejemplo:
        /     \
      Sí       No
      ↓         ↓
-   Ação A    Ação B
+   Acción A    Acción B
        \     /
         ↓
        Fin
