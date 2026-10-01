@@ -2,7 +2,7 @@
 
 > **Módulo:** Anatomía de un LLM
 > **Nivel:** Desde cero → avanzado → Maestría/PhD
-> **Prerequisitos:** Tokenización, embeddings, Transformer, attention y positional information
+> **Prerrequisitos:** Tokenización, embeddings, Transformer, attention y positional information
 > **Conceptos clave:** pretraining, next-token prediction, causal language modeling, loss, cross-entropy, backpropagation, gradients, optimizer, batch, step, epoch, generalización, scaling laws.
 
 ---
