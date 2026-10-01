@@ -3,7 +3,7 @@
 > **Nivel:** Básico → Intermedio → Avanzado → Maestría/PhD
 > **Área:** Arquitecturas de modelos de IA
 > **Actualizado:** Septiembre de 2026
-> **Prerequisitos:** Transformer, Attention, Positional Information, Inference, Sampling y Context Window.
+> **Prerrequisitos:** Transformer, Attention, Positional Information, Inference, Sampling y Context Window.
 
 ---
 
