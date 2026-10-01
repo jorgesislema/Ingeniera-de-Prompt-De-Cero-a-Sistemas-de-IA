@@ -1288,7 +1288,7 @@ El segundo enfoque puede adaptarse mejor a tareas heterogéneas, pero introduce 
 
 ---
 
-# 38. Similaridad semántica
+# 38. Similitud semántica
 
 Para seleccionar ejemplos podemos buscar aquellos que se parezcan a la nueva consulta.
 
@@ -1966,7 +1966,7 @@ Es un modelo conceptual para pensar la selección de ejemplos.
 
 ---
 
-# 60. Similaridad y diversidad
+# 60. Similitud y diversidad
 
 Si seleccionamos únicamente los ejemplos más parecidos:
 
