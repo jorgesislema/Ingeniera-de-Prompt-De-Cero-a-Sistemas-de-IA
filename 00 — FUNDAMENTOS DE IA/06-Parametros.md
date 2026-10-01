@@ -1743,7 +1743,7 @@ El modelo puede utilizar esa información sin que sus pesos sean reentrenados.
 
 ---
 
-# 49. Context Learning vs aprendizaje de parámetros
+# 49. In-Context Learning vs aprendizaje de parámetros
 
 Cuando un modelo parece "aprender" algo durante una conversación, debemos tener cuidado con el término.
 
