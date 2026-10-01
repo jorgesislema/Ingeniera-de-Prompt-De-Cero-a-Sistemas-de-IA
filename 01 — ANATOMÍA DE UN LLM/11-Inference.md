@@ -2,7 +2,7 @@
 
 > **Nivel:** Fundamentos → Intermedio → Avanzado → Maestría/PhD
 > **Área:** LLM, Deep Learning, Transformers, Generación de texto
-> **Prerequisitos:** Tokens, embeddings, Transformer, attention, pretraining, instruction tuning y alignment
+> **Prerrequisitos:** Tokens, embeddings, Transformer, attention, pretraining, instruction tuning y alignment
 > **Objetivo:** Comprender qué ocurre cuando un modelo recibe un prompt, procesa el contexto, calcula probabilidades y genera una respuesta token por token.
 
 ---
