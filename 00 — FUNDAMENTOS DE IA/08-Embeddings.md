@@ -1560,7 +1560,7 @@ Esto es mucho más útil que evaluar únicamente la similitud matemática.
 
 ---
 
-# 50. Similaridad alta no garantiza relevancia
+# 50. Similitud alta no garantiza relevancia
 
 Supongamos:
 
@@ -2868,7 +2868,7 @@ query embedding
 Luego:
 
 ```text
-similaridad(
+Similitud(
     query embedding,
     document embedding
 )
