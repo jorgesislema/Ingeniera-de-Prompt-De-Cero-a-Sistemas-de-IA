@@ -2,7 +2,7 @@
 
 > **Nivel:** Fundamentos → Avanzado → Maestría/PhD
 > **Área:** LLM, inferencia y generación
-> **Prerequisitos:** `07-Pretraining.md`, `10-Alignment.md`, `11-Inference.md`
+> **Prerrequisitos:** `07-Pretraining.md`, `10-Alignment.md`, `11-Inference.md`
 
 ---
 
