@@ -2,7 +2,7 @@
 
 > **Nivel:** Fundamentos → Ingeniería → Maestría / PhD
 > **Área:** Arquitecturas de modelos de IA
-> **Prerequisitos:** Transformer, Attention, Dense Transformers, entrenamiento e inferencia
+> **Prerrequisitos:** Transformer, Attention, Dense Transformers, entrenamiento e inferencia
 > **Actualizado:** septiembre de 2026
 
 ---
