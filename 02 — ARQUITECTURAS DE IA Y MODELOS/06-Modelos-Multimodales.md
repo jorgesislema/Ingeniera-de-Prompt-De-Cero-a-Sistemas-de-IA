@@ -2708,7 +2708,7 @@ E_audio(audio)  → z_audio
 El objetivo puede ser aprender relaciones:
 
 ```text
-similaridad(z_texto, z_imagen)
+Similitud(z_texto, z_imagen)
 ```
 
 o permitir interacción mediante atención:
