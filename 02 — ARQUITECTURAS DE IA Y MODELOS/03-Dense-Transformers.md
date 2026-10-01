@@ -2441,7 +2441,7 @@ Este es el tipo de razonamiento que queremos desarrollar en el repositorio.
 
 Prompt:
 
-```text id="z7prm2"
+```text
 Analiza estos 100 registros y encuentra duplicados.
 ```
 
