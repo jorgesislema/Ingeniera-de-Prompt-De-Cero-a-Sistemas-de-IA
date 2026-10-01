@@ -2,7 +2,7 @@
 
 > **Nivel:** Fundamentos → Ingeniería → Maestría / PhD
 > **Área:** Arquitecturas y familias de modelos
-> **Prerequisitos:** LLM, Transformer, Attention, Dense Transformers, Mixture of Experts, inferencia, sampling
+> **Prerrequisitos:** LLM, Transformer, Attention, Dense Transformers, Mixture of Experts, inferencia, sampling
 > **Actualizado:** septiembre de 2026
 
 ---
