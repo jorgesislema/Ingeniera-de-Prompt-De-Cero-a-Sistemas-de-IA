@@ -2,7 +2,7 @@
 
 > **Módulo:** Anatomía de un LLM
 > **Nivel:** Desde cero → avanzado → Maestría/PhD
-> **Prerequisitos:** Pretraining, Transformer, embeddings, attention, inferencia y contexto
+> **Prerrequisitos:** Pretraining, Transformer, embeddings, attention, inferencia y contexto
 > **Conceptos clave:** fine-tuning, pretraining, post-training, supervised fine-tuning, SFT, instruction tuning, dataset supervisado, labels, loss, catastrophic forgetting, PEFT, LoRA, adapters, QLoRA, RLHF, preference optimization, DPO, evaluación y seguridad.
 
 ---
