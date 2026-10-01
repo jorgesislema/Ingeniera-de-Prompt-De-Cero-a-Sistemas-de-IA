@@ -2,7 +2,7 @@
 
 > **Nivel:** Fundamentos técnicos de LLM
 > **Ruta:** Ingeniería de Prompt — De Cero a Sistemas de IA
-> **Prerequisito:** `02-Tokenizacion.md`
+> **Prerrequisito:** `02-Tokenizacion.md`
 > **Nivel académico:** Inicial → Maestría / PhD
 > **Actualizado:** septiembre de 2026
 
