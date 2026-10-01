@@ -1843,9 +1843,9 @@ Esto suele ser más fácil de evaluar que un único prompt gigantesco.
 
 ---
 
-# 50. Antipatrones de Zero-Shot
+# 50. Antipatrónes de Zero-Shot
 
-## Antipatron 1 — Prompt demasiado ambiguo
+## Antipatrón 1 — Prompt demasiado ambiguo
 
 ```text
 Analiza esto.
@@ -1861,7 +1861,7 @@ Problema:
 
 ---
 
-## Antipatron 2 — Asumir conocimiento perfecto
+## Antipatrón 2 — Asumir conocimiento perfecto
 
 ```text
 Como eres experto, sabes exactamente qué hacer.
@@ -1871,7 +1871,7 @@ El rol no garantiza conocimiento ni precisión.
 
 ---
 
-## Antipatron 3 — Confundir instrucciones con ejemplos
+## Antipatrón 3 — Confundir instrucciones con ejemplos
 
 ```text
 Hazlo exactamente así:
@@ -1886,7 +1886,7 @@ No hay ejemplos.
 
 ---
 
-## Antipatron 4 — Confiar en la salida sin validación
+## Antipatrón 4 — Confiar en la salida sin validación
 
 ```text
 Modelo
@@ -1906,7 +1906,7 @@ Sistema
 
 ---
 
-## Antipatron 5 — Introducir contexto irrelevante
+## Antipatrón 5 — Introducir contexto irrelevante
 
 ```text
 Gran cantidad de documentos
@@ -1918,7 +1918,7 @@ Más información puede significar más ruido.
 
 ---
 
-## Antipatron 6 — Confundir una respuesta convincente con una correcta
+## Antipatrón 6 — Confundir una respuesta convincente con una correcta
 
 ```text
 Fluidez
