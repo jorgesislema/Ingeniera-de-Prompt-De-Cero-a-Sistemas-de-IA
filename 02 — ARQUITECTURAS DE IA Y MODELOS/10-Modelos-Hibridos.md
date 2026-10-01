@@ -3,7 +3,7 @@
 > **Nivel:** Básico → Intermedio → Avanzado → Maestría/PhD
 > **Área:** Arquitecturas de modelos de IA
 > **Actualizado:** Septiembre de 2026
-> **Prerequisitos:** Transformer, Attention, Positional Information, Inference, Long-Context, Modelos de Razonamiento y Modelos Multimodales.
+> **Prerrequisitos:** Transformer, Attention, Positional Information, Inference, Long-Context, Modelos de Razonamiento y Modelos Multimodales.
 
 ---
 
@@ -2556,7 +2556,7 @@ Esto permite construir pipelines más confiables.
 
 Un sistema híbrido debería registrar:
 
-```text id="y1d7jj"
+```text
 modelo utilizado
 ruta utilizada
 herramienta utilizada
@@ -2570,7 +2570,7 @@ costo
 
 Si existe routing:
 
-```text id="opzv8d"
+```text
 ruta A
 ruta B
 ruta C
@@ -2586,7 +2586,7 @@ No basta con evaluar el modelo final.
 
 Debemos evaluar:
 
-```text id="z3q5c5"
+```text
 Componente A
      ↓
 Componente B
