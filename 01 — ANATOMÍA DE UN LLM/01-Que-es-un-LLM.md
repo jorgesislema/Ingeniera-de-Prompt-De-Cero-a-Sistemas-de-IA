@@ -2,7 +2,7 @@
 
 > **Nivel:** Fundamentos técnicos de LLM
 > **Ruta:** Ingeniería de Prompt — De Cero a Sistemas de IA
-> **Prerequisitos:** `00-FUNDAMENTOS/`
+> **Prerrequisitos:** `00-FUNDAMENTOS/`
 > **Nivel académico:** Inicial → Avanzado
 > **Actualizado:** septiembre de 2026
 
